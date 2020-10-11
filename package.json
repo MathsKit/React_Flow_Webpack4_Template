@@ -1,0 +1,49 @@
+{
+  "name": "React_Flow_Webpack4_Template",
+  "version": "1.0.0",
+  "homepage": ".",
+  "description": "A template for setup React project with Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn run start-dev --open --hot --mode development",
+    "build": "yarn run clean-dist && webpack -p --config=configs/webpack/prod.js",
+    "clean-dist": "rimraf dist/*",
+    "start-dev": "webpack-dev-server --config=configs/webpack/dev.js",
+    "start-prod": "yarn run build",
+    "test": "jest --coverage --watchAll --config=configs/jest.json",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
+    "flow": "flow"
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": "Stanley.Jin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-flow": "^7.10.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "file-loader": "^6.0.0",
+    "flow-bin": "^0.135.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^4.3.0",
+    "prettier": "^2.1.2",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "source-map-loader": "^1.1.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.2"
+  }
+}
